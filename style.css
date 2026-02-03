@@ -1,26 +1,59 @@
-body{
+*{
     margin:0;
-    font-family:Segoe UI;
-    background:linear-gradient(135deg,#4e73df,#1cc88a);
-    color:white;
-    text-align:center;
+    padding:0;
+    box-sizing:border-box;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    min-height:100vh;
+}
+
+/* ===== Header ===== */
 header{
-    background:rgba(0,0,0,0.3);
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(15px);
+}
+
+header h1{
+    font-size:28px;
+    letter-spacing:1px;
+}
+
+.status{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* ===== Navigation ===== */
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
     padding:15px;
 }
 
 nav button{
-    margin:5px;
-    padding:8px 15px;
+    padding:10px 20px;
     border:none;
-    border-radius:10px;
-    cursor:pointer;
-    background:#f6c23e;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+    color:white;
     font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
+nav button:hover{
+    transform:scale(1.1);
+}
+
+/* ===== Sections ===== */
 section{
     display:none;
     padding:20px;
@@ -30,28 +63,57 @@ section{
     display:block;
 }
 
+/* ===== Card дизайн ===== */
 .card{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(12px);
-    margin:15px auto;
-    padding:20px;
-    width:350px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    max-width:420px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(20px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    transition:0.3s;
 }
 
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== Input ===== */
 input{
-    padding:8px;
-    margin:5px;
-    border-radius:8px;
+    width:100%;
+    padding:10px;
+    margin:10px 0;
     border:none;
+    border-radius:12px;
+    font-size:16px;
 }
 
-button:hover{
-    opacity:0.8;
+/* ===== Button ===== */
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
+/* ===== Нәтиже тізімі ===== */
 ul{
     list-style:none;
-    padding:0;
+    margin-top:15px;
+}
+
+li{
+    padding:8px;
+    background:rgba(255,255,255,0.15);
+    margin:5px 0;
+    border-radius:10px;
+}
+
+/* ===== Адаптив ===== */
+@media(max-width:500px){
+    .card{
+        width:90%;
+    }
 }
