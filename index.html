@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>SMART MATH 5-7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🧠 SMART MATH (5-7 сынып)</h1>
+    <div class="status">
+        ⏱ Уақыт: <span id="timer">60</span> сек |
+        🏆 Ұпай: <span id="score">0</span>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showSection('formulas')">Формулалар</button>
+    <button onclick="showSection('game')">Ойын</button>
+    <button onclick="showSection('calculator')">Калькулятор</button>
+    <button onclick="showSection('leaderboard')">Нәтиже</button>
+</nav>
+
+<!-- ================= ФОРМУЛАЛАР ================= -->
+<section id="formulas" class="active">
+
+<div class="card">
+    <h2>📐 Тік төртбұрыш ауданы</h2>
+    <p><b>Формула:</b> S = a × b</p>
+    <p>a = 8, b = 5. S табыңдар:</p>
+    <input type="number" id="rectAnswer">
+    <button onclick="checkRectangle()">Тексеру</button>
+    <p id="rectResult"></p>
+</div>
+
+<div class="card">
+    <h2>🔺 Үшбұрыш ауданы</h2>
+    <p><b>Формула:</b> S = (a × h) / 2</p>
+    <p>a = 6, h = 4. S табыңдар:</p>
+    <input type="number" id="triangleAnswer">
+    <button onclick="checkTriangle()">Тексеру</button>
+    <p id="triangleResult"></p>
+</div>
+
+<div class="card">
+    <h2>📊 Пайыз есебі</h2>
+    <p><b>Формула:</b> p% = (p/100) × a</p>
+    <p>400 санының 25%-ын тап:</p>
+    <input type="number" id="percentAnswer">
+    <button onclick="checkPercent()">Тексеру</button>
+    <p id="percentResult"></p>
+</div>
+
+</section>
+
+<!-- ================= ОЙЫН ================= -->
+<section id="game">
+<div class="card">
+    <h2 id="question"></h2>
+    <input type="number" id="gameAnswer">
+    <button onclick="checkGame()">Жауап беру</button>
+    <p id="gameResult"></p>
+</div>
+</section>
+
+<!-- ================= КАЛЬКУЛЯТОР ================= -->
+<section id="calculator">
+<div class="card">
+    <h2>🧮 Онлайн калькулятор</h2>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <div class="calc-btns">
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">×</button>
+        <button onclick="calculate('/')">÷</button>
+    </div>
+    <h3 id="calcResult"></h3>
+</div>
+</section>
+
+<!-- ================= НӘТИЖЕ ================= -->
+<section id="leaderboard">
+<div class="card">
+    <h2>🏅 Нәтижелер</h2>
+    <input type="text" id="playerName" placeholder="Атыңыз">
+    <button onclick="saveScore()">Сақтау</button>
+    <ul id="scoresList"></ul>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<div class="card">
+    <h2>📐 Тригонометрия (9 сынып)</h2>
+
+    <p><b>Негізгі тепе-теңдік:</b> sin²x + cos²x = 1</p>
+    <p>Егер sin x = 0.6 болса (x – сүйір бұрыш), cos x мәнін тап.</p>
+
+    <input type="number" step="0.01" id="trig1">
+    <button onclick="checkTrig1()">Тексеру</button>
+    <p id="trig1Result"></p>
+
+    <hr>
+
+    <p><b>Тепе-теңдік:</b> 1 + tan²x = 1/cos²x</p>
+    <p>Егер cos x = 0.8 болса, tan²x мәнін тап.</p>
+
+    <input type="number" step="0.01" id="trig2">
+    <button onclick="checkTrig2()">Тексеру</button>
+    <p id="trig2Result"></p>
+
+    <hr>
+
+    <p><b>Күрделі өрнек:</b></p>
+    <p>
+        Егер sin x = 0.5 болса,  
+        мәнін тап:  
+        (1 − cos²x) / sin²x
+    </p>
+
+    <input type="number" step="0.01" id="trig3">
+    <button onclick="checkTrig3()">Тексеру</button>
+    <p id="trig3Result"></p>
+
+</div>
